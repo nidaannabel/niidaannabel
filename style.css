@@ -1,0 +1,140 @@
+ul {
+    list-style: none;
+    background: pink;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Menu rata tengah */
+    top: 175px; /* Jarak dari atas untuk navbar */
+    left: 0;
+    z-index: 1000; /* Pastikan navbar berada di atas konten */
+}
+
+ul li {
+    display: inline-block;
+    position: relative;
+    height: 60px;
+    padding: 0 15px;
+}
+
+ul li a {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0 20px;
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: 500;
+    font-family: 'Arial Black', sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+ul a:hover {
+    background-color: palevioletred;
+    transform: scale(1.05); /* Efek perbesaran */
+}
+
+ul li .dropdown {
+    background: pink;
+    position: absolute;
+    display: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: auto;
+    height: auto;
+    top: 60px; /* Dropdown muncul di bawah menu */
+    left: 0;
+    min-width: 200px;
+}
+
+ul li:hover .dropdown {
+    display: block;
+}
+
+ul li ul.dropdown li a img {
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+ul li ul.dropdown li a:hover img {
+    border-radius: 5px;
+}
+
+ul li ul.dropdown li {
+    padding: 10px 20px;
+    text-align: left;
+}
+
+body{
+    background-color: papayawhip;
+}
+
+
+/* Konten Utama */
+.main-container {
+    display: grid;
+    grid-template-columns: 1fr 3fr; 
+    gap: 20px;
+    margin-top: 0px;
+    padding: 20px;
+}
+
+/* Bagian Galeri */
+.gallery-section {
+    background-color: pink;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr; /* 3 kolom utk foto */
+    gap: 10px;
+}
+
+.gallery-item img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Bagian Konten */
+.content-section {
+    background-color: pink;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.content-card {
+    margin-bottom: 20px;
+    background-color: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.content-card h3 {
+    font-size: 24px;
+    font-family: 'Arial Black', sans-serif;
+    color: pink;
+}
+
+.content-card p {
+   color: black;
+}
+
+.navbar {
+    position: fixed;   /* Menggunakan fixed agar navbar tetap di tempat */
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 15px 0;
+    z-index: 1000; /* Agar navbar tetap berada di atas konten lainnya */
+}
